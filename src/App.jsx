@@ -16,15 +16,6 @@ function App() {
   
   return (
     <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
-      {/* Platform Version Header */}
-      <div style={{ 
-        background: 'var(--primary)', color: 'white', padding: '8px 20px', 
-        fontSize: '0.75rem', fontWeight: 800, textAlign: 'center', 
-        display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' 
-      }}>
-        <Info size={14} /> NEW: ICECYCLE PLATFORM v2.0 READY (CHENNAI REGION)
-      </div>
-
       {/* Theme Toggle */}
       <button className="theme-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>
         {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
