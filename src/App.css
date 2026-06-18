@@ -1,0 +1,161 @@
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile App Simulation Frame */
+.mobile-frame {
+  max-width: 420px;
+  width: 100%;
+  height: 90vh;
+  margin: 20px auto;
+  border-radius: 40px;
+  border: 8px solid #334155;
+  background: var(--bg-dark);
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 50px 100px -20px rgba(0,0,0,0.5);
+}
+
+.mobile-frame::-webkit-scrollbar {
+  display: none;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+  padding: 40px;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header-section {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  padding: 24px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-top: 10px;
+}
+
+/* App UI Components */
+.app-header {
+  padding: 24px;
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px;
+}
+
+.flavour-card {
+  padding: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.flavour-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  border: 3px solid var(--glass-border);
+}
+
+/* Voice Button */
+.voice-fab {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  background: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(255, 93, 143, 0.4);
+  color: white;
+}
+
+.voice-visualizer {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  opacity: 0;
+  animation: ripple 2s infinite;
+}
+
+@keyframes ripple {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Customer Map Simulator */
+.map-placeholder {
+  height: 100%;
+  width: 100%;
+  background: #1e293b;
+  position: relative;
+  background-image: radial-gradient(#334155 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.map-pin {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--secondary);
+  border: 4px solid white;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  cursor: pointer;
+}
+
+.map-pin::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  top: 4px;
+  left: 4px;
+}
