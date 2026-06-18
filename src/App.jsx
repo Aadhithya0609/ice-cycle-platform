@@ -3,13 +3,24 @@ import SellerApp from './components/SellerApp';
 import CustomerApp from './components/CustomerApp';
 import AdminDashboard from './components/AdminDashboard';
 import SupervisorDashboard from './components/SupervisorDashboard';
+import { Sun, Moon } from 'lucide-react';
 import './App.css';
 
 function App() {
-  const [currentView, setCurrentView] = useState('customer'); // Default to customer for first impression
+  const [currentView, setCurrentView] = useState('customer');
+  const [isDarkMode, setIsDarkMode] = useState(true);
+
+  useEffect(() => {
+    document.body.className = isDarkMode ? 'dark-mode' : 'light-mode';
+  }, [isDarkMode]);
   
   return (
-    <div className="app-container">
+    <div className={`app-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
+      {/* Theme Toggle */}
+      <button className="theme-toggle" onClick={() => setIsDarkMode(!isDarkMode)}>
+        {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
+      </button>
+
       {/* Switcher for presentation purposes */}
       <div className="view-switcher">
         <button 
