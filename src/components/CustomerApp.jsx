@@ -20,7 +20,7 @@ const CustomerApp = () => {
   return (
     <div className="mobile-frame">
       <div style={{ height: '100%', width: '100%', position: 'relative' }}>
-        <MapContainer center={CHENNAI_CENTER} zoom={13} zoomControl={false} style={{ height: '100%', width: '100%' }}>
+        <MapContainer center={CHENNAI_CENTER} zoom={13} zoomControl={false} style={{ height: '100%', width: '100%', minHeight: '400px' }}>
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           
           {sellers.map((s) => (
