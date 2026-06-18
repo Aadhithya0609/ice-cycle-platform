@@ -107,7 +107,7 @@ const SellerApp = () => {
             exit={{ opacity: 0, scale: 0.9 }}
             style={{ 
               position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
-              background: 'rgba(0,0,0,0.9)', padding: '30px', borderRadius: '24px', z-index: 100,
+              background: 'rgba(0,0,0,0.9)', padding: '30px', borderRadius: '24px', zIndex: 100,
               textAlign: 'center', width: '80%'
             }}
           >
