@@ -55,7 +55,7 @@ const CustomerApp = () => {
       <div className="mobile-frame" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div className="glass-card" style={{ padding: '30px', textAlign: 'center', width: '85%' }}>
           <User size={48} color="var(--primary)" style={{ marginBottom: '15px' }} />
-          <h3>Welcome to IceCycle</h3>
+          <h3>Welcome to DreamCloud</h3>
           <p className="text-muted" style={{ fontSize: '0.8rem', marginBottom: '20px' }}>Sign in to discover sellers near your location.</p>
           <button className="switch-btn active" style={{ width: '100%', padding: '14px' }} onClick={() => setIsLogged(true)}>Login with Mobile</button>
         </div>
